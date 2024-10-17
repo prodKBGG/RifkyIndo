@@ -1,0 +1,193 @@
+Dokumentasi Library RIFKYindo
+        Library ini bertujuan untuk mengganti istilah pemrograman Arduino standar dengan
+        istilah Bahasa Indonesia agar lebih mudah dipahami oleh pengguna berbahasa Indonesia.
+
+Header File: IniPunyaRifkii.h
+
+DEKLARASI /VARIABEL
+        1. angka (int)
+        Deskripsi: Tipe data untuk bilangan bulat (integer).
+        Pengganti: int
+        Contoh:
+        // Kode Awal
+        int nilai = 10;
+        // Kode yang Diubah
+        angka nilai = 10;
+
+
+        2. karakter (char)
+        Deskripsi: Tipe data untuk karakter tunggal.
+        Pengganti: char
+        Contoh:
+        // Kode Awal
+        char huruf = 'A';
+        // Kode yang Diubah
+        karakter huruf = 'A';
+
+        3. desimal (float)
+        Deskripsi: Tipe data untuk bilangan pecahan (float).
+        Pengganti: float
+        Contoh:
+        // Kode Awal
+        float suhu = 36.5;
+        // Kode yang Diubah
+        desimal suhu = 36.5;
+
+        11. ganda
+        Deskripsi: Tipe data untuk bilangan pecahan ganda (double).
+        Pengganti: double
+        Contoh:
+        // Kode Awal
+        double jarak = 123456.78;
+        // Kode yang Diubah
+        ganda jarak = 123456.78;
+
+        12. logika
+        Deskripsi: Tipe data untuk nilai boolean (true/false).
+        Pengganti: bool
+        Contoh:
+        // Kode Awal
+        bool status = true;
+        // Kode yang Diubah
+        logika status = true;
+
+KONFIGURASI PIN 
+     1. KELUARAN (OUTPUT)
+        Deskripsi: Digunakan untuk mengatur pin sebagai output.
+        Pengganti: OUTPUT
+        Contoh:
+        // Kode Awal
+        pinMode(pinLED, OUTPUT);
+        // Kode yang Diubah
+        aturSebagai(pinLED, KELUARAN);
+
+      2. MASUKAN (INPUT)
+        Deskripsi: Digunakan untuk mengatur pin sebagai input.
+        Pengganti: INPUT
+        Contoh:
+        // Kode Awal
+        pinMode(pinTombol, INPUT);
+        // Kode yang Diubah
+        aturSebagai(pinTombol, MASUKAN);
+
+     3. MENYALA (HIGH)
+        Deskripsi: Digunakan untuk memberikan sinyal HIGH (5V) ke pin output.
+        Pengganti: HIGH
+        Contoh:
+        // Kode Awal
+        digitalWrite(pinLED, HIGH);
+        // Kode yang Diubah
+        kendalikan(pinLED, MENYALA);
+
+      4. MATI (LOW)
+        Deskripsi: Digunakan untuk memberikan sinyal LOW (0V) ke pin output.
+        Pengganti: LOW
+        Contoh:
+        // Kode Awal
+        digitalWrite(pinLED, LOW);
+        // Kode yang Diubah
+        kendalikan(pinLED, MATI);
+
+      5. aturSebagai(pin, mode)
+        Deskripsi: Mengatur mode pin, apakah akan digunakan sebagai input atau output.
+        Parameter:
+        pin: Nomor pin yang akan diatur.
+        mode: Mode pin, yaitu KELUARAN atau MASUKAN.
+        Pengganti: pinMode()
+        Contoh:
+        // Kode Awal
+        pinMode(pinLED, OUTPUT);
+        // Kode yang Diubah
+        aturSebagai(pinLED, KELUARAN);
+
+     6. kendalikan(pin, status)
+        Deskripsi: Memberikan sinyal MENYALA atau MATI pada pin tertentu.
+        Parameter:
+        pin: Nomor pin yang akan diatur.
+        status: Status sinyal, yaitu MENYALA atau MATI.
+        Pengganti: digitalWrite()
+        Contoh:
+        // Kode Awal
+        digitalWrite(pinLED, HIGH);
+        // Kode yang Diubah
+        kendalikan(pinLED, MENYALA);
+
+
+DELAY
+     1. tunggu(delay)
+        Deskripsi: Menunggu selama waktu tertentu dalam milidetik.
+        Parameter:
+        ms: Waktu dalam milidetik.
+        Pengganti: delay()
+        Contoh:
+        // Kode Awal
+        delay(1000);
+        // Kode yang Diubah
+        tunggu(1000);
+
+
+CLASS PROGRAM
+    1. fungsi (void)
+        Deskripsi: Digunakan sebagai pengganti tipe data void untuk mendefinisikan fungsi tanpa nilai balik.
+        Pengganti: void
+
+     2. sekali (setup)
+        Deskripsi: Digunakan sebagai pengganti fungsi setup(), yang dipanggil sekali saat program dimulai.
+        Pengganti: setup()
+        Contoh:
+     Kode Awal
+        void setup() {
+        Serial.begin(9600);
+        }
+     Kode yang Diubah
+        fungsi sekali() {
+        mulaiSerial(9600);
+        }
+
+        11. abadi (loop)
+        Deskripsi: Digunakan sebagai pengganti fungsi loop(), yang dijalankan terus-menerus setelah sekali selesai dieksekusi.
+        Pengganti: loop()
+        Contoh:
+     Kode Awal
+        void loop() {
+        Kode yang dijalankan berulang
+        }
+     Kode yang Diubah
+        fungsi abadi() {
+        Kode yang dijalankan berulang
+        }
+FUNGSI SERIAL
+    1. mulaiSerial(baud)/Serial.begin
+        Deskripsi: Memulai komunikasi Serial dengan baud rate yang ditentukan.
+        Parameter:
+        baud: Kecepatan baud untuk komunikasi Serial (misalnya 9600).
+        Pengganti: Serial.begin()
+        Contoh:
+        // Kode Awal
+        Serial.begin(9600);
+        // Kode yang Diubah
+        mulaiSerial(9600);
+
+    2. cetak(data)/Serial.print
+        Deskripsi: Mencetak data ke Serial tanpa garis baru.
+        Parameter:
+        data: Data yang akan dicetak (bisa berupa teks atau angka).
+        Pengganti: Serial.print()
+        Contoh:
+        // Kode Awal
+        Serial.print("Nilai: ");
+        Serial.print(nilai);
+        // Kode yang Diubah
+        cetak("Nilai: ");
+        cetak(nilai);
+
+    3. cetakkebawah(data)/Serial.printl
+        Deskripsi: Mencetak data ke Serial dengan menambahkan garis baru di akhir.
+        Parameter:
+        data: Data yang akan dicetak (bisa berupa teks atau angka).
+        Pengganti: Serial.println()
+        Contoh:
+        // Kode Awal
+        Serial.println("Program dimulai");
+        // Kode yang Diubah
+        cetakkebawah("Program dimulai");
